@@ -1,7 +1,7 @@
 # clamdb
 CLaM Database Management
 
-For a detailed description, please see [the documentation website](https://fuzzy-couscous-01244cb5.pages.github.io/)
+For a detailed description, please see [the documentation website](https://special-parakeet-456fc9c7.pages.github.io/)
 # Installation
 ```
 # Install the 'githubinstall' package from CRAN, if you have not already done so.
