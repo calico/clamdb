@@ -1,0 +1,47 @@
+Package: clamdb
+Type: Package
+Title: Calico Lipidomics and Metabolomics Database
+Version: 1.0.0
+Authors@R: c(
+    person("Sean", "Hackett", email = "sean@calicolabs.com", role = c("aut", "cre")),
+    person("Phillip", "Seitzer", email = "phillipseitzer@calicolabs.com", role = "aut"))
+Author: Sean Hackett
+Maintainer: Sean Hackett <sean@calicolabs.com>
+Description: CLaM DB standardizes diverse information about chemical compounds to generate a SQL database which can be used for matching observed mass spectrometry data.
+Depends: R (>= 3.2.3)
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+biocViews: 
+Imports: checkmate,
+    clamr,
+    dplyr,
+    dbplyr,
+    ggplot2,
+    tidyr (>= 1.0.0),
+    purrr,
+    readr,
+    rlang,
+    tibble,
+    glue,
+    reshape2,
+    stringr,
+    DBI,
+    debugr
+Suggests: knitr,
+    rmarkdown,
+    igraph,
+    fuzzyjoin (>= 0.1.3),
+    jsonlite,
+    plyr,
+    reticulate,
+    scales,
+    lubridate,
+    RMySQL,
+    ggjoy,
+    e1071,
+    randomForest,
+    testthat,
+    feather
+VignetteBuilder: knitr
+RoxygenNote: 7.1.1

@@ -1,0 +1,69 @@
+reference:
+- title: "Peak and Spectra ETL"
+- subtitle: "Importing Fragmentation MSPs"
+  desc: "Fragmentation spectra in .msp files"
+- contents:
+  - download_msp_library
+  - parse_all_msps
+  - run_msp_parse
+  - read_msp_feathers
+  - format_msp_list
+  - format_msp_libraries
+- subtitle: "Importing Other Spectra"
+- contents:
+  - summarize_loop_injection
+- subtitle: "Import Utils"
+- contents:
+  - match_structures
+  - canonicalize_structures
+- subtitle: "Formatting"
+  desc: "Standardize data before databasing"
+- contents:
+  - subset_ms_data_list
+  - starts_with("dbimport")
+- title: "Spectra Export"
+- desc: "Exporting Fragmentation MSPs"
+- contents:
+  - generate_msp
+  - format_one_msp_entry
+- title: "Standards Database"
+  desc: "MySQL standards database from heterogeneous elution and fragmentation data"
+- subtitle: "Construction"
+- contents:
+  - starts_with("standard_db")
+  - populate_lipid_attributes
+- subtitle: "Modification"
+- contents:
+  - add_sql_table
+  - sql_class_lookup_table
+  - get_db_create_time
+- subtitle: "Query"
+- contents:
+  - find_standards
+  - extract_standard_ions
+  - get_standards_subset
+  - query_standards_subset
+  - read_standards_subset
+- title: "Featurization"
+  desc: "Generate features comparing experimental and standard peaks and spectra"
+- contents:
+  - match_id_candidates
+  - align_features_to_standards
+  - starts_with("compare_aligned")
+- title: "ID Scoring"
+  desc: "Score candidate identification matches"
+- contents:
+  - match_method
+  - starts_with("score")
+  - meta_featurize_scores
+  - spectral_matches
+- title: "Spectra"
+- contents:
+  - select_best_fragmentations
+  - collapse_spectra
+  - sum_spectra_by_class
+  - cosine_sim_scans
+  - test_collision_energy
+template:
+  params:
+    bootswatch: flatly
