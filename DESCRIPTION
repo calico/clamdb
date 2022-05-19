@@ -44,4 +44,4 @@ Suggests: knitr,
     testthat,
     feather
 VignetteBuilder: knitr
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.0
