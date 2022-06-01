@@ -20,11 +20,18 @@ get_standards_subset <- function(mass_spec_standards_con, matched_method, r_scri
   # path to an existing/to-be-created standards .Rds
   saved_standards_path <- create_saved_standards_path(r_scripts_path, matched_method)
 
+  alt_rds_file_name <- gsub(".msp$", ".rds", matched_method)
+  alt_rds_file_path <- file.path(r_scripts_path, alt_rds_file_name)
+  
   # Use saved file instead of connection to DB for testing
   if (class(mass_spec_standards_con) == "character" && mass_spec_standards_con == "use-rds-file") {
     if (file.exists(saved_standards_path)) {
       standards_data <- readRDS(saved_standards_path)
       return(standards_data)
+    } else if (file.exists(alt_rds_file_name)) {
+      standards_data <- readRDS(alt_rds_file_name)
+    } else if (file.exists(alt_rds_file_path)) {
+      standards_data <- readRDS(alt_rds_file_path)
     } else {
       stop(paste0("Cached .rds database file is missing! looked for file: ", saved_standards_path))
     }
