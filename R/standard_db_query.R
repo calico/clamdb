@@ -620,7 +620,7 @@ select_best_fragmentations <- function(target_energies, fragmentations) {
 
   fragmentation_summaries <- list()
 
-  if (!is.na(target_energies) && nrow(fragmentation_energies %>% dplyr::filter(n_energies == 1)) != 0) {
+  if (!any(is.na(target_energies)) && nrow(fragmentation_energies %>% dplyr::filter(n_energies == 1)) != 0) {
 
     # analyze single energy spectra to match the target energies
     chosen_energy_matches <- fragmentation_energies %>%
