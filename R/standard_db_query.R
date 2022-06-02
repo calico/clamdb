@@ -35,7 +35,12 @@ get_standards_subset <- function(mass_spec_standards_con, matched_method, r_scri
       standards_data <- readRDS(alt_rds_file_path)
       return(standards_data)
     } else {
-      stop(paste0("Cached .rds database file is missing! looked for file: ", saved_standards_path))
+      stop(
+        paste0("Cached .rds database file is missing! looked for files: ",
+               saved_standards_path, "\n",
+               alt_rds_file_name, "\n",
+               alt_rds_file_path, "\n")
+        )
     }
   }
 
