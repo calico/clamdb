@@ -2,16 +2,14 @@
 CLaM Database Management
 
 For a detailed description, please see [the documentation website](https://special-parakeet-456fc9c7.pages.github.io/)
+
 # Installation
 ```
-# Install the 'githubinstall' package from CRAN, if you have not already done so.
-install.packages("githubinstall")
+# Install clamr using devtools (clamdb dependency)
+devtools::install_github("https://github.com/calico/clamr.git")
 
-# Install clamr using githubinstall (clamdb dependency)
-githubinstall::githubinstall("clamr")
-
-# Install clamdb using githubinstall
-githubinstall::githubinstall("clamdb")
+# Install clamdb using devtools
+devtools::install_github("https://github.com/calico/clamdb.git")
 ```
 
 # Additional Installation
